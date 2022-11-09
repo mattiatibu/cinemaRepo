@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+body{
+  font-family: 'Advent Pro', sans-serif;
+}
+footer{
+  height: 100px;
+  width: 100%;
+  background-color: #00aaff!important;
+
+}
+
+ngb-carousel.carousel.slide{
+  background-image: url("../src/assets/images/carouselDefault.jpg");
+  margin-top: -19px;
+  margin-bottom: 20px;
+
+  .picsum-img-wrapper {
+    margin-left: 39%;
+  }
+  .carousel-caption {
+    top:26rem;
+
+    h3 {
+      font-size: 50px;
+      text-shadow: black 2px 3px 3px;
+    }
+    h2{
+      font-size: 16px;
+      text-shadow: black 2px 2px 2px;
+      font-weight: lighter;
+    }
+  }
+
+  .carousel-control-prev, .carousel-control-next{
+    opacity: 1!important;
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+
+}
