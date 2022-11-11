@@ -1,0 +1,30 @@
+.container-detail{
+  display: block;
+  height:100vh;
+  margin-top: -19px;
+
+
+  .detail-body{
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-top: 2%;
+  }
+
+  .detail-image{
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  .detail-text{
+    text-align: justify;
+  }
+  .detail-title{
+    font-weight: bold;
+    //font-size: 16px;
+    color:#8e210b;
+    margin-bottom:20px;
+  }
+}
