@@ -1,5 +1,10 @@
 <div class="container-detail">
-  <div class="detail-image" [ngStyle]="{'background-image':'url('+film.image+')'}"></div>
+  <div class="detail-image">
+    <div class="locandina" [ngStyle]="{'background-image':'url('+film.image+')'}"></div>
+    <div class="foto1" [ngStyle]="{'background-image':'url('+film.photos[0]+')'}"></div>
+    <div class="foto2" [ngStyle]="{'background-image':'url('+film.photos[1]+')'}"></div>
+    <div class="foto3" [ngStyle]="{'background-image':'url('+film.photos[2]+')'}"></div>
+  </div>
   <div class="detail-body">
     <h5 class="detail-title">Titolo: {{film.title}}</h5>
     <p class="details-text">{{film.description}}</p>

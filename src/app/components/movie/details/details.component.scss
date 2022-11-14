@@ -11,10 +11,46 @@
   }
 
   .detail-image{
-    height: 500px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    //display: flex;
+    height: 550px;
+    .locandina{
+      float: left;
+      height: 550px;
+      width: 22%;
+      margin-left: -0%;
+      margin-right: 0.5%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+    .foto1{
+      float:left;
+      height: 550px;
+      width: 50%;
+      margin-right: 0.5%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+    .foto2{
+      float:left;
+      height: 270px;
+      width: 27%;
+      margin-bottom: 0.25%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+    .foto3{
+      float:left;
+      height: 270px;
+      width: 27%;
+      margin-top: 0.25%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+    }
+
   }
 
 
@@ -24,7 +60,7 @@
   .detail-title{
     font-weight: bold;
     //font-size: 16px;
-    color:#8e210b;
+    color:#00aaff;
     margin-bottom:20px;
   }
 }

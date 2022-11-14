@@ -1,10 +1,10 @@
 <div class="container-movies">
-  <div class="card" *ngFor="let movie of movies ">
+  <div class="card" *ngFor="let movie of films ">
     <div class="card-image" [ngStyle]="{'background-image': 'url('+movie.image+')'}"></div>
     <div class="card-body">
       <h5 class="card-title">{{movie.title}}</h5>
-      <p class="card-text">{{movie.description}}</p>
-      <a class="btn btn-primary" routerLink="/informazioni/{{movie._id}}">Informazioni</a>
+      <p class="card-text">{{movie.description | slice: 0:100}}...</p>
+      <a class="btn btn-primary" routerLink="informazioni/{{movie.title}}/{{movie.category}}/{{movie._id}}">Informazioni</a>
     </div>
   </div>
 </div>

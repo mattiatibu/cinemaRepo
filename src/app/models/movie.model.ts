@@ -7,6 +7,7 @@ export interface Movie{
   release_date: string;
   length: number;
   type: string;
+  photos:string[];
   date: string;
   published: boolean;
 }
