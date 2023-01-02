@@ -5,11 +5,22 @@
     <div class="foto2" [ngStyle]="{'background-image':'url('+film.photos[1]+')'}"></div>
     <div class="foto3" [ngStyle]="{'background-image':'url('+film.photos[2]+')'}"></div>
   </div>
-  <div class="detail-body">
-    <h5 class="detail-title">Titolo: {{film.title}}</h5>
-    <p class="details-text">{{film.description}}</p>
+  <div class="bottone-indietro1">
+    <a class="btn btn-primary" routerLink="/films/{{film.type}}">Indietro</a>
+  </div>
+  <div class="detail-body border rounded">
+    <h3 class="detail-title">{{film.title}}</h3>
+    <ul>
+      <li><span class="identificatore">Titolo:</span> {{film.title}}</li>
+      <li><span class="identificatore">Trama:</span> <p class="details-text"><span [innerHTML]="film.description"></span></p></li>
+      <li><span class="identificatore">Genere:</span> {{film.category}}</li>
+      <li><span class="identificatore">Durata:</span> {{film.length}} minuti</li>
+      <li><span class="identificatore">Data d'uscita:</span> {{dataUscita}}</li>
+    </ul>
 
 
   </div>
-
+  <div class="bottone-indietro2">
+    <a class="btn btn-primary" routerLink="/films/{{film.type}}">Indietro</a>
+  </div>
 </div>

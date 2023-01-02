@@ -1,5 +1,5 @@
 <app-carousel></app-carousel>
-<section>
+<section id="main-container">
   <div class="contenier-title">
     <h2>Benvenuti in Film Futuri</h2>
     <h3>Scopri i prossimi film in uscita</h3>
@@ -12,3 +12,32 @@
     </p>
   </div>
 </section>
+<div class="ultimi-film">
+  <h3>Usciti al cinema</h3>
+  <div class="films">
+    <!--<app-recipe-card [recipes]="ricette"></app-recipe-card>-->
+    <app-movie-card [pagina]="'cinema'" [paginazione]="false"></app-movie-card>
+  </div>
+</div>
+<div class="ultimi-film">
+  <h3>Usciti in digitale</h3>
+  <div class="films">
+    <!--<app-recipe-card [recipes]="ricette"></app-recipe-card>-->
+    <app-movie-card [pagina]="'piattaforme digitali'" [paginazione]="false"></app-movie-card>
+  </div>
+</div>
+
+<!-- MODALE DELLA REGISTRAZIONE-->
+<ng-template [ngIf]="nome">
+  <div>
+    <div id="dati-utente">
+      <h2>Grazie {{nome}} {{cognome}} per esserti registrato/a</h2>
+      <ul>
+        <li>Nome: <strong>{{nome}}</strong></li>
+        <li>Cognome: <strong>{{cognome}}</strong></li>
+        <li>Email: <strong>{{email}}</strong></li>
+      </ul>
+      <button class="btn btn-primary" (click)="closeModal()">chiudi</button>
+    </div>
+  </div>
+</ng-template>

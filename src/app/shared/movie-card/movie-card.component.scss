@@ -5,6 +5,7 @@
   //height: 100vh;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 
 
   .card {
@@ -40,4 +41,53 @@
     border-color: #00aaff;
     background-color: #00aaff;
   }
+}
+
+
+@media only screen and (min-width: 650px) and (max-width: 959px){
+  .container-movies{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .card{
+      width: 40%;
+      margin-left: 2%;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 649px){
+
+  .container-movies{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .card{
+      width: 80%;
+      margin-left: 1.2%;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  .container-movies{
+
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .card{
+      width: 80%;
+      margin-left: 2%;
+    }
+  }
+
+
 }

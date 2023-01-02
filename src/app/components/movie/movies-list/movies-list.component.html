@@ -1,4 +1,18 @@
-<h2 id="titolo">Film in uscita</h2>
+<div [ngSwitch]="tipo">
+  <div *ngSwitchCase="'piattaforme digitali'" id="stile-digitali">
+    <h1>Prossimamente sulle piattaforme digitali</h1>
+  </div>
+  <div *ngSwitchCase="'cinema'" id="stile-cinema">
+    <h1>Prossimamente al cinema</h1>
+  </div>
+  <div *ngSwitchCase="'all'" id="stile-all" >
+    <h1>Film in uscita</h1>
+  </div>
+  <div *ngSwitchDefault id="stile-default">
+    <h1>Film in uscita</h1>
+  </div>
+  <app-movie-card [pagina]="'films'" [paginazione]="true"></app-movie-card>
+</div>
 <!--<app-movie-card [movies]="films"></app-movie-card>-->
-<app-movie-card [pagina]="'cinema'"></app-movie-card>
+<!--<app-movie-card [pagina]="'films'"></app-movie-card>-->
 

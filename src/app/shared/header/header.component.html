@@ -4,36 +4,74 @@
       <img src="../assets/images/logo-film-futuri.png" class="logo" alt="logo film futuri">
       <span>Film Futuri</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarNav" [ngbCollapse]="isCollapsed">
+      <ul class="navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" routerLink="home">
             <fa-icon [icon]="homeIcon"></fa-icon>Home</a>
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
           <a class="nav-link" routerLink="home">
             <fa-icon [icon]="trailerIcon"></fa-icon>Trailer</a>
-        </li>
-        <li>
-          <a class="nav-link" routerLink="all/cinema">
+        </li>-->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="films/cinema">
             <fa-icon [icon]="cinemaIcon"></fa-icon>Cinema</a>
         </li>
-        <li>
-          <a class="nav-link" routerLink="all/piattaforme digitali">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="films/piattaforme digitali">
             <fa-icon [icon]="tvIcon"></fa-icon>Piattaforme Digitali</a>
         </li>
-        <li>
-          <a class="nav-link" routerLink="all/all">
-            <fa-icon [icon]="tvIcon"></fa-icon>Tutti i film</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="films/all">
+            <fa-icon [icon]="allIcon"></fa-icon>Tutti i film</a>
+        </li>
+        <li class="nav-item" *ngIf="!authService.isLogged()">
+          <a class="nav-link" routerLink="login">
+            <fa-icon [icon]="userIcon"></fa-icon>Accedi</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><fa-icon [icon]="searchIcon"></fa-icon></button>
-      </form>
+      <ul class="navbar-nav" *ngIf="authService.isLogged()">
+        <li class="nav-item user">
+          <fa-icon [icon]="userIcon" id="iconaUtente"></fa-icon><span class="name"> Ciao {{user.name}}</span>
+        </li>
+        <li class="nav-item user">
+            <span *ngIf="user.role==='admin'" class="nuovo-film"> <a class="nav-link piu" routerLink="films/all/nuovo-film"><fa-icon id="iconaPiu" [icon]="iconaNuovo"></fa-icon></a>
+            </span>
+        </li>
+        <li class="nav-item user">
+          <a class="nav-link profilo" (click)="open(modaleProfilo)"><fa-icon [icon]="profileIcon"></fa-icon></a>
+        </li>
+        <li class="nav-item user">
+          <a class="nav-link esci" (click)="logout()"> <fa-icon [icon]="logoutIcon"></fa-icon></a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" routerLink="nuova-ricetta">
+            <fa-icon [icon]="iconaScheda"></fa-icon>Inserisci Ricetta</a>
+        </li>-->
+      </ul>
+      <div id="container-search">
+        <input type="text" name="cerca" [(ngModel)]="testo" class="form-control cerca">
+        <button (click)="cerca()" class="btn btn-primary">
+          <fa-icon [icon]="searchIcon"></fa-icon>
+        </button>
+      </div>
     </div>
   </nav>
 </header>
+
+<ng-template #modaleProfilo let-modal>
+  <div class="modal-header">
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <app-profile></app-profile>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn" (click)="modal.dismiss()">CHIUDI</button>
+
+  </div>
+</ng-template>

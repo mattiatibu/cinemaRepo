@@ -1,0 +1,56 @@
+@import '../../../shared/styles/colori.scss';
+
+#contenitore{
+  height:80vh;
+  form{
+  width: 30%;
+  margin:auto;
+  margin-top:80px;
+
+  float:left;
+  margin-left: 35%;
+
+  button.btn.btn-primary.btn-block.mb-4 {
+    border-color: $primary-color-1;
+    background-color: $primary-color-1;
+    width: 100%;
+  }
+}
+
+#registrati{
+  display: block;
+  position: relative;
+  clear: both;
+  margin: auto;
+  text-align: center;
+  a{
+    text-decoration: none;
+  }
+}
+}
+
+
+@media only screen and (min-width: 650px) and (max-width: 959px){
+
+}
+@media only screen and (min-width: 481px) and (max-width: 649px){
+
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  form{
+    width: 90%!important;
+    margin:auto;
+    margin-top:80px;
+
+    float:left;
+    margin-left: 5%!important;
+
+    button.btn.btn-primary.btn-block.mb-4 {
+      border-color: $primary-color-1;
+      background-color: $primary-color-1;
+      width: 100%;
+    }
+  }
+}

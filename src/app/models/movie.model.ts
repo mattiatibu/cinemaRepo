@@ -1,5 +1,5 @@
 export interface Movie{
-  _id: number;
+  _id?: number;
   title: string;
   description: string;
   image: string;
@@ -8,6 +8,6 @@ export interface Movie{
   length: number;
   type: string;
   photos:string[];
-  date: string;
-  published: boolean;
+  date?:string;
+  published?: boolean;
 }

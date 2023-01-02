@@ -1,0 +1,53 @@
+@import "../../shared/styles/colori.scss";
+#main-container{
+  padding: 15px;
+
+  p{
+    text-align: justify;
+    font-size: 13px;
+  }
+}
+h3{
+  color:#00aaff;
+}
+h2{
+  //text-align: center;
+  color:#00aaff;
+}
+.ultimi-film{
+  h3{
+    text-align: center;
+  }
+}
+
+
+#dati-utente {
+  position: absolute;
+  top: 35%;
+  width: 60%;
+  height: 250px;
+  background-color: white;
+  margin-left: 20%;
+  padding: 36px;
+  border: 9px solid  $primary-color-1!important;
+  border-radius: 20px;
+  box-sizing: border-box;
+
+  h2 {
+    text-align: center;
+    font-size: 23px;
+    margin-bottom: 30px;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  .btn.btn-primary {
+    margin: auto;
+    display: block;
+    width: 25%;
+    padding: 10px;
+    background-color: $primary-color-1;
+  }
+}

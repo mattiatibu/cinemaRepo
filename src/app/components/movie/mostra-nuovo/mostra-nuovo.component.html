@@ -1,0 +1,24 @@
+<div class="container-nuovo">
+  <div class="modale-film">
+    <div id="chiusura">
+      <button class="btn btn-primary" (click)="closeModal()"><fa-icon [icon]="iconaChiudi"></fa-icon></button>
+    </div>
+    <h2>Congratulazioni il nuovo film è stato inserito</h2>
+    <div id="dati-film">
+      <div class="immagine"[ngStyle]="{'background-image': 'url('+ image + ')'}"></div>
+      <div class="testo">
+        <h3>{{title}}</h3>
+        <p><span [innerHTML]="description"></span></p>
+        <div>
+          <p>durata:{{length}}</p>
+        </div>
+        <div>
+          <p>data d'uscita:{{dataUscita}}</p>
+        </div>
+      </div>
+    </div>
+    <div id="bottone">
+      <button class="btn btn-primary" (click)="inserireAltro()">Inserisci altro</button>
+    </div>
+  </div>
+</div>

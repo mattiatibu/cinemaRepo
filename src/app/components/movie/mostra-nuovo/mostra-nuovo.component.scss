@@ -1,0 +1,104 @@
+@import "../../../shared/styles/colori.scss";
+.container-nuovo{
+  background-image: url(https://www.contocorrenteonline.it/wp-content/uploads/2021/08/sala.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 100vh;
+  display: flex;
+  margin-left: -12px;
+  margin-right: -12px;
+  margin-top: -19px;
+  .modale-film{
+    position: absolute;
+    bottom: 20%;
+    width: 60%;
+    background-color: white;
+    margin-left: 20%;
+    padding: 36px;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+
+    #dati-film{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .immagine{
+        height: 200px;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 10px;
+      }
+      .testo{
+            font-size: 12px;
+            margin-left: 20px;
+          }
+    }
+
+
+
+
+
+    #bottone{
+      display: flex;
+      justify-content: center;
+    }
+    #chiusura{
+      display: flex;
+      justify-content: right;
+      .btn.btn-primary{
+        border-radius: 50%;
+      }
+    }
+    .btn.btn-primary{
+      background-color: $primary-color-1;
+      border-color: $primary-color-1;
+    }
+
+  }
+
+
+}
+@media only screen and (min-width: 650px) and (max-width: 959px){
+
+}
+@media only screen and (min-width: 481px) and (max-width: 649px){
+
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  .container-nuovo{
+    background-image: url(https://www.contocorrenteonline.it/wp-content/uploads/2021/08/sala.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-top: -19px;
+
+    .modale-film{
+      position: absolute;
+      //bottom: 0%;
+      width: 90%;
+      background-color: white;
+      margin-left: 5%;
+      padding: 36px;
+      border-radius: 20px;
+      border-color: black;
+      border-width: 1px;
+
+      #dati-film{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+  }
+  }
+}

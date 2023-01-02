@@ -12,14 +12,18 @@ import { elementAt } from 'rxjs';
 export class MovieCardComponent implements OnInit {
  films:Movie[]=[];
  @Input() pagina:string;
+ @Input() paginazione:boolean;
 
+
+ page=1;
+ filmPerPagina=4;
  constructor(private moviesService:MoviesService,
   private activatedRoute:ActivatedRoute,
   private router:Router
   ) { }
 
  ngOnInit(): void {
-
+  console.log("type");
    /*this.moviesService.getMovies().subscribe({
      next: (res) => {
        this.films=res;
@@ -29,12 +33,17 @@ export class MovieCardComponent implements OnInit {
      }
    })*/
    this.activatedRoute.params.subscribe((urlParams) => {
+
     const tipo:string=urlParams['type'];
     this.moviesService.getMovies().subscribe({
       next: (res) => {
         this.films=res;
-        if(tipo!=='all'){
-          this.films=this.films.filter((elem)=> elem.type===tipo);
+        if(this.pagina==='films'){
+          if(tipo!=='all'){
+            this.films=this.films.filter((elem)=> elem.type===tipo);
+          }
+        }else{
+          this.films=this.films.filter((elem)=> elem.type===this.pagina).slice(0,4);
         }
 
       },
@@ -48,4 +57,10 @@ export class MovieCardComponent implements OnInit {
 
    })
  }
+
+ paginate(event){
+  event.page =event.page + 1;
+  this.page = event.page;
+  this.filmPerPagina=event.rows;
+  }
 }

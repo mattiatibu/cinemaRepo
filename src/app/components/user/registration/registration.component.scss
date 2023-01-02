@@ -1,0 +1,79 @@
+.form-label{
+  //text-size:10px;
+}
+.register-image{
+  //display: flex;
+  height: 100%;
+  width: 103%;
+  background-position: top;
+  //float:left;
+  position: relative;
+  //margin-right: 20%;
+  background-repeat: no-repeat;
+}
+.registrazione-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+.form-container{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.contenitore-colonne{
+  overflow: hidden;
+  display:flex;
+  width: 80%;
+  position: relative;
+  left:10%;
+  justify-content: center;
+  border-color: black;
+}
+.rounded{
+  border-radius: 2rem !important;
+}
+.border{
+  border-color:black !important;
+  border-width: 1px !important;
+}
+.titolo{
+  text-align: center;
+  color:#00aaff;
+  margin-bottom: 10px;
+}
+
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+
+input.ng-invalid.ng-dirty{
+  border: 1px solid yellow;
+}
+
+input.ng-valid{
+  border: 1px solid green;
+}
+
+.registrati{
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn.btn-primary{
+  border-radius:1.5rem !important;
+  color: #fff;
+  border-color: #00aaff;
+  background-color: #00aaff;
+}
+
+.is-danger{
+  float: right;
+  font-size: 11px;
+  color:red;
+  font-weight: bold;
+}

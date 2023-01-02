@@ -1,0 +1,88 @@
+<div class="container-nuovo-film">
+  <div class="container-form">
+    <div class="titolo"><h2>Inserisci nuovo film</h2></div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <input type="text" id="title" name="title" placeholder="titolo" class="form-control" formControlName="title" >
+      <label for="title" class="form-label">Titolo</label>
+      <p class="help is-danger" *ngIf="!form.get('title').valid && form.get('title').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <ckeditor [editor]="editor" [config]="editorConfig" id="description" name="description" placeholder="descrizione ricetta" class="form-control description" formControlName="description" ></ckeditor>
+      <label for="description" class="form-label">Descrizione</label>
+      <p class="help is-danger" *ngIf="!form.get('description').valid && form.get('description').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <input type="text" id="image" name="image" placeholder="immagine" class="form-control" formControlName="image" >
+      <label for="image" class="form-label">Immagine</label>
+      <p class="help is-danger" *ngIf="!form.get('image').valid && form.get('image').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <input type="text" id="category" name="category" placeholder="genere" class="form-control" formControlName="category" >
+      <label for="difficulty" class="form-label">Genere </label>
+      <p class="help is-danger" *ngIf="!form.get('category').valid && form.get('category').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <input type="date" id="release-date" name="release_date" placeholder="data d'uscita" class="form-control" formControlName="release_date" >
+      <label for="release-date" class="form-label">data d'uscita </label>
+      <p class="help is-danger" *ngIf="!form.get('release_date').valid && form.get('release_date').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <input type="text" id="length" name="length" placeholder="durata" class="form-control" formControlName="length" >
+      <label for="length" class="form-label">durata </label>
+      <p class="help is-danger" *ngIf="!form.get('length').valid && form.get('length').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <input type="text" id="type" name="type" placeholder="dove vederlo" class="form-control" formControlName="type" >
+      <label for="type" class="form-label">Dove vederlo </label>
+      <p class="help is-danger" *ngIf="!form.get('type').valid && form.get('type').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <input type="text" id="type" name="photo1" placeholder="immagine" class="form-control" formControlName="photo1" >
+      <label for="type" class="form-label">prima immagine </label>
+      <p class="help is-danger" *ngIf="!form.get('photo1').valid && form.get('photo1').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <input type="text" id="type" name="photo2" placeholder="immagine" class="form-control" formControlName="photo2" >
+      <label for="type" class="form-label">seconda immagine </label>
+      <p class="help is-danger" *ngIf="!form.get('photo2').valid && form.get('photo2').touched">Il campo è obbligatorio</p>
+    </div>
+    <div>
+      <input type="text" id="type" name="photo3" placeholder="immagine" class="form-control" formControlName="photo3" >
+      <label for="type" class="form-label">terza immagine </label>
+      <p class="help is-danger" *ngIf="!form.get('photo3').valid && form.get('photo3').touched">Il campo è obbligatorio</p>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="pubblica" formControlName="pubblica">
+      <label class="form-check-label" for="pubblica">Pubblicare adesso?</label>
+    </div>
+    <div class="inserisci-film">
+      <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Inserisci</button>
+    </div>
+  </form>
+</div>
+</div>
+<!--<ng-template [ngIf]="submitted">
+  <div class="modale-film">
+    <div id="chiusura">
+      <button class="btn btn-primary" (click)="closeModal()"><fa-icon [icon]="iconaChiudi"></fa-icon></button>
+    </div>
+    <h2>Congratulazioni il nuovo film è stato inserito</h2>
+    <div id="dati-ricetta">
+      <div class="immagine"[ngStyle]="{'background-image': 'url('+ form.value.image + ')'}"></div>
+      <div class="testo">
+        <h3>{{form.value.title}}</h3>
+        <p>{{form.value.description}}</p>
+        <div>
+          <p>durata:{{form.value.length}}</p>
+        </div>
+        <div>
+          <p>data d'uscita:{{form.value.releaseDate}}</p>
+        </div>
+      </div>
+    </div>
+    <div id="bottone">
+      <button class="btn btn-primary" (click)="inserireAltro()">Nuova</button>
+    </div>
+  </div>
+</ng-template>-->

@@ -1,0 +1,127 @@
+@import "../../../shared/styles/colori.scss";
+/*.modale-film{
+  position: absolute;
+  top: 10%;
+  width: 60%;
+  background-color: white;
+  margin-left: 20%;
+  padding: 36px;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 1px;
+
+  .immagine{
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .testo{
+    font-size: 16px;
+  }
+
+
+  #bottone{
+    display: flex;
+    justify-content: center;
+  }
+  #chiusura{
+    display: flex;
+    justify-content: right;
+  }
+}
+*/
+
+
+.container-nuovo-film{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1%;
+  align-items: center;
+  .container-form{
+    width: 50%;
+    align-items: center;
+  }
+  .colonne-container{
+    overflow: hidden;
+    display:flex;
+    width: 80%;
+    position: relative;
+    left:10%;
+    justify-content: center;
+    border-color: black;
+  }
+  .titolo{
+    text-align: center;
+    color:$primary-color-1;
+    margin-bottom:10px;
+    width:80%;
+    margin-top:10px;
+  }
+
+  input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+
+  input.ng-invalid.ng-dirty{
+    border: 1px solid yellow;
+  }
+
+  input.ng-valid{
+    border: 1px solid green;
+  }
+
+  .registrati{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .btn.btn-primary{
+    //border-radius:1.5rem !important;
+    color: #fff;
+    border-color: $primary-color-1;
+    background-color: $primary-color-1;
+  }
+
+  .is-danger{
+    float: right;
+    font-size: 11px;
+    color:red;
+    font-weight: bold;
+  }
+
+  .inserisci-film{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+
+@media only screen and (min-width: 650px) and (max-width: 959px){
+  .container-form{
+    width: 100%;
+    align-items: center;
+  }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 649px){
+
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  .container-form{
+    width: 100%!important;
+    align-items: center;
+  }
+
+
+}
+
+
+
+

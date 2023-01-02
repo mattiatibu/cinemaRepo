@@ -40,3 +40,41 @@ ngb-carousel.carousel.slide{
 
 
 }
+
+
+//password
+.p-password{
+  display: block!important;
+}
+
+.p-inputtext{
+  width: 100%!important;
+}
+
+.p-password-input{
+  width: 100%!important;
+}
+
+//paginazione
+
+.container-pagination{
+  display: block;
+  clear: both;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+.testo-ricette-totali
+  {
+    margin-bottom: 20px!important;
+  }
+
+.description .ck-editor__editable{
+  min-height: 250px!important;//devo metterle entrambe uguali altrimenti non cambia l'altezza
+  max-height: 250px!important;
+
+}

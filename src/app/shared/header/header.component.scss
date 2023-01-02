@@ -3,6 +3,9 @@ header{
   padding-left: 20px;
   margin-bottom: 20px;
 
+  button.navbar-toggler {
+    margin-right: 10px;
+  }
   .bg-light{
     background-color: #00aaff!important;
 
@@ -22,11 +25,15 @@ header{
     position: relative;
     top:5px;
   }
-  form.form-inline.my-2.my-lg-0 {
-    position: relative;
-    left: 40%;
-    float: right;
+  #navbarNav {
+    //display: flex !important;
+    flex-basis: auto;
+    justify-content: space-between;
   }
+  /*form.form-inline.my-2.my-lg-0 {
+    position: relative;
+    float: right;
+  }*/
   button.btn.btn-outline-success.my-2.my-sm-0 {
     display: block;
     float: right;
@@ -35,31 +42,65 @@ header{
     bottom: 20px;
     left: 55px;
     //border-radius: 50%;
-    color: black;
-    --bs-btn-color: black;
-    --bs-btn-border-color: black;
-    --bs-btn-hover-bg: blue;
-    --bs-btn-hover-border-color: blue;
-    --bs-btn-focus-shadow-rgb: 25, 135, 84;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: blue;
-    --bs-btn-active-border-color: blue;
-    --bs-btn-active-shadow: inset 0 3px 5px
-  rgba(0, 0, 0, 0.125);
-    //--bs-btn-disabled-color: #198754;
-    //--bs-btn-disabled-bg: transparent;
-    //--bs-btn-disabled-border-color: #198754;
-    --bs-gradient: none;
+    color: rgba(0, 0, 0, 0.55);
+    border-color: rgb(33, 84, 156);
+    background-color: rgb(33, 84, 156);
 
 
   }
+  .user{
+    display: flex;
+    margin-left: 15px;
+    //color:white;
+    margin-top: 5px;
+    .name{
+      margin-right: 10px;
+      margin-left: 5px;
+      margin-top:10px;
+    }
+    fa-icon#iconaUtente {
+      margin-top: 5px;
+    }
+    a{
+      //color: white!important;
+      margin-left: 5px;
+      text-decoration: none;
+      cursor: pointer!important;
+    }
 
-  input.form-control.mr-sm-2 {
-    margin-right: 10px;
-    height: 45px;
-    padding-right: 100px;
-    bottom: -24px;
-    position: relative;
+    span.nuovo-film {
+      margin-top: 7px;
+    }
+    a.nav-link.piu {
+      margin-top: -8px;
+    }
+  }
+}
+#container-search {
+  text-align: right;
+  margin-right: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  .cerca {
+    width: 80%;
+    float: left;
+    margin-right: 5px;
+    height: 43px;
+  }
+
+  button.btn.btn-primary {
+
+
+    color: rgba(0, 0, 0, 0.55);
+    border-color: rgb(33, 84, 156);
+    background-color: rgb(33, 84, 156);
+
 
   }
 }
+
